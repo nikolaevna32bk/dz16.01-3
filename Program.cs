@@ -4,17 +4,19 @@
 //7 -> да
 //1 -> нет
 
-int dayNumber = RedInt("Введите число от 1 до 7: ");
-Console.WriteLine("Рабочий день ("dayNumber) ");
-int RedInt(string message)
+
+Console.WriteLine("Нужно узнать, является ли этот день выходным или нет? ");
+
 {
-    Console.Write(message);
+    Console.Write("Введите номер дня недели ");
 }
-string Рабочий день(int a);
+int num = int.Parse(Console.ReadLine());
+if (num >= 1 && num <= 5)
 {
-    if (a > 0 && a < 8)
+    Console.Write(" Нет, это не выходной ");
 }
+else if (num >= 6 && num<=7 )
 {
-    if(a ==7 || a ==6)
+    Console.Write(" Да, это выходной ");
 }
-Console.Write("Под цифрой " + a +" -Выходной");
+else Console.Write(" Не существует такого дня недели");
